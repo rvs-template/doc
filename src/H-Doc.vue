@@ -6,9 +6,9 @@
       <h-doc-content>
         <slot></slot>
       </h-doc-content>
-      <h-doc-footer-nav />
+      <!-- <h-doc-footer-nav /> -->
     </h-doc-container>
-    <h-doc-simulator></h-doc-simulator>
+    <!-- <h-doc-simulator></h-doc-simulator> -->
   </div>
 </template>
 

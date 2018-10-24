@@ -2,10 +2,15 @@ import Vue from 'vue';
 import HDoc from './H-Doc.vue';
 import Block from './component/Block.vue';
 import Content from './component/Content.vue';
+import Container from './component/Container.vue';
 import DemoBlock from './component/DemoBlock.vue';
 import DemoSection from './component/DemoSection.vue';
+import Nav from './component/Nav.vue';
+import Header from './component/Header.vue';
+import Footer from './component/Footer.vue';
 
 import progress from 'nprogress';
+
 import './style/index.less';
 
 const components = [
@@ -15,7 +20,8 @@ const components = [
   HDoc,
   Content,
   DemoBlock,
-  DemoSection
+  DemoSection,
+  Container
 ];
 
 export default function install() {
@@ -31,5 +37,6 @@ export {
   HDoc,
   Content,
   DemoBlock,
-  DemoSection
+  DemoSection,
+  Container
 };

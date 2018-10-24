@@ -10,7 +10,11 @@ module.exports = {
         use: ['vue-loader']
       },
       {
-        test: /\.(css|less)$/,
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.less$/,
         use: ['style-loader', 'css-loader', 'less-loader']
       }
     ]

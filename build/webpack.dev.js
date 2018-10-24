@@ -1,16 +1,26 @@
 const path = require('path');
 const merge = require('webpack-merge');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const baseWebpackConfig = require('./webpack.base');
 
 module.exports = merge(baseWebpackConfig, {
+  context: path.resolve(__dirname, '../'),
   entry: {
-    index: './src/index.js'
+    index: './example/index.js'
   },
   output: {
-    path: path.resolve(__dirname, '/dist'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist/',
     filename: '[name].js'
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      chunks: ['doc'],
+      template: 'index.html',
+      filename: 'index.html',
+      inject: true
+    })
+  ],
   devServer: {
     contentBase: './',
     compress: true,

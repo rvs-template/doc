@@ -1,10 +1,12 @@
 <template>
-  <div></div>
+  <div>
+    <slot />
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'demo-section'
+  name: 'h-doc-container'
 }
 </script>
 
