@@ -1,12 +1,21 @@
+// https://eslint.org/docs/user-guide/configuring
+
 module.exports = {
-  root: true,
+  root: true, // 以当前目录为根目录，不再向上查找 .eslintrc.js
+  parserOptions: {
+    parser: 'babel-eslint'
+  },
   env: {
+    browser: true, // browser environments
+    es6: true, // enables ES6 syntax
     jest: true
   },
-  extends: ['plugin:vue/strongly-recommended'],
+  extends: ['plugin:vue/recommended'],
+  // required to lint *.vue files
   plugins: [
-    'vue'
+    'vue',
   ],
+  // add your custom rules here
   rules: {
     'semi': [error, always],
     'space-before-function-paren': [error, never],

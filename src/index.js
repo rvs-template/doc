@@ -8,7 +8,7 @@ import DemoSection from './component/DemoSection.vue';
 import Nav from './component/Nav.vue';
 import Header from './component/Header.vue';
 import Footer from './component/Footer.vue';
-
+import Simulator from './component/Simulator.vue';
 import progress from 'nprogress';
 
 import './style/index.less';
@@ -21,7 +21,8 @@ const components = [
   Content,
   DemoBlock,
   DemoSection,
-  Container
+  Container,
+  Simulator
 ];
 
 export default function install() {
@@ -38,5 +39,7 @@ export {
   Content,
   DemoBlock,
   DemoSection,
-  Container
+  Container,
+  Simulator,
+  progress
 };
