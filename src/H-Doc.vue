@@ -2,7 +2,7 @@
   <div class="h-doc">
     <h-doc-header :config="config.header"></h-doc-header>
     <h-doc-nav :nav-config="config.nav" :base="base"></h-doc-nav>
-    <h-doc-container>
+    <h-doc-container :has-simulator="!!(simulator || simulators.length)">
       <h-doc-content>
         <slot></slot>
       </h-doc-content>
@@ -20,6 +20,7 @@ export default {
       type: Object,
       required: true
     },
+    simulator: String,
     simulators: {
       type: Array,
       default: () => []
