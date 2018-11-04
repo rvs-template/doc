@@ -21,6 +21,9 @@ export default {
     padding-left: @h-doc-nav-width;
   }
   .h-doc-container--with-simulator {
-    padding-right: @h-doc-simulator-width;
+    padding-right: calc(@h-doc-simulator-width + @h-doc-padding);
+    @media (max-width: 1300px) {
+      padding-right: calc(@h-doc-simulator-small-width + @h-doc-padding);
+    }
   }
 </style>

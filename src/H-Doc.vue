@@ -8,7 +8,7 @@
       </h-doc-content>
       <!-- <h-doc-footer-nav /> -->
     </h-doc-container>
-    <h-doc-simulator src="mobile.html"></h-doc-simulator>
+    <h-doc-simulator :src="simulator"></h-doc-simulator>
   </div>
 </template>
 

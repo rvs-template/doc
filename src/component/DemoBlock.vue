@@ -1,6 +1,6 @@
 <template>
   <section class="demo-block">
-    <h2>{{ title }}</h2>
+    <h2 class="demo-block__title">{{ title }}</h2>
     <slot />
   </section>
 </template>

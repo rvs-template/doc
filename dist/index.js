@@ -528,8 +528,8 @@ var external__vue__default = /*#__PURE__*/__webpack_require__.n(external__vue_);
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-44e78e60","hasScoped":false,"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/H-Doc.vue
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"h-doc"},[_c('h-doc-header',{attrs:{"config":_vm.config.header}}),_vm._v(" "),_c('h-doc-nav',{attrs:{"nav-config":_vm.config.nav,"base":_vm.base}}),_vm._v(" "),_c('h-doc-container',{attrs:{"has-simulator":!!(_vm.simulator || _vm.simulators.length)}},[_c('h-doc-content',[_vm._t("default")],2)],1),_vm._v(" "),_c('h-doc-simulator',{attrs:{"src":"mobile.html"}})],1)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-3d8a8045","hasScoped":false,"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/H-Doc.vue
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"h-doc"},[_c('h-doc-header',{attrs:{"config":_vm.config.header}}),_vm._v(" "),_c('h-doc-nav',{attrs:{"nav-config":_vm.config.nav,"base":_vm.base}}),_vm._v(" "),_c('h-doc-container',{attrs:{"has-simulator":!!(_vm.simulator || _vm.simulators.length)}},[_c('h-doc-content',[_vm._t("default")],2)],1),_vm._v(" "),_c('h-doc-simulator',{attrs:{"src":_vm.simulator}})],1)}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ var selectortype_template_index_0_src_H_Doc = (esExports);
@@ -676,7 +676,7 @@ var Content_Component = Content_normalizeComponent(
     hasSimulator: Boolean
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-6e15d76b","hasScoped":false,"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/component/Container.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-863dcb96","hasScoped":false,"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/component/Container.vue
 var Container_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"h-doc-container",class:{ 'h-doc-container--with-simulator': _vm.hasSimulator }},[_vm._t("default")],2)}
 var Container_staticRenderFns = []
 var Container_esExports = { render: Container_render, staticRenderFns: Container_staticRenderFns }
@@ -725,8 +725,8 @@ var Container_Component = Container_normalizeComponent(
     title: String
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-6f13ed4e","hasScoped":false,"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/component/DemoBlock.vue
-var DemoBlock_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"demo-block"},[_c('h2',[_vm._v(_vm._s(_vm.title))]),_vm._v(" "),_vm._t("default")],2)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-1c83f8b8","hasScoped":false,"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/component/DemoBlock.vue
+var DemoBlock_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"demo-block"},[_c('h2',{staticClass:"demo-block__title"},[_vm._v(_vm._s(_vm.title))]),_vm._v(" "),_vm._t("default")],2)}
 var DemoBlock_staticRenderFns = []
 var DemoBlock_esExports = { render: DemoBlock_render, staticRenderFns: DemoBlock_staticRenderFns }
 /* harmony default export */ var component_DemoBlock = (DemoBlock_esExports);
@@ -764,12 +764,38 @@ var DemoBlock_Component = DemoBlock_normalizeComponent(
 //
 //
 //
+//
+//
 
 /* harmony default export */ var DemoSection = ({
-  name: 'demo-section'
+  name: 'demo-section',
+  props: {
+    title: String,
+    name: String,
+    background: String
+  },
+  computed: {
+    demoName: function demoName() {
+      return this.name || this.getParentName();
+    },
+    style: function style() {
+      return {
+        background: this.background
+      };
+    }
+  },
+  methods: {
+    getParentName: function getParentName() {
+      var $parent = this.$parent;
+
+      if ($parent && $parent.$options.name) {
+        return $parent.$options.name.replace('demo-', '');
+      }
+    }
+  }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-885e2910","hasScoped":false,"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/component/DemoSection.vue
-var DemoSection_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div')}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-0c96cae4","hasScoped":false,"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/component/DemoSection.vue
+var DemoSection_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"h-doc-demo-section",class:("demo-" + _vm.demoName),style:(_vm.style)},[_vm._t("default")],2)}
 var DemoSection_staticRenderFns = []
 var DemoSection_esExports = { render: DemoSection_render, staticRenderFns: DemoSection_staticRenderFns }
 /* harmony default export */ var component_DemoSection = (DemoSection_esExports);
@@ -1228,7 +1254,7 @@ var content = __webpack_require__(7);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("7de71f9d", content, true, {});
+var update = __webpack_require__(2)("61791283", content, true, {});
 
 /***/ }),
 /* 7 */
@@ -1341,7 +1367,7 @@ var content = __webpack_require__(14);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("5cc65988", content, true, {});
+var update = __webpack_require__(2)("0f8a4641", content, true, {});
 
 /***/ }),
 /* 14 */
@@ -1352,7 +1378,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, ".h-doc-container{overflow:hidden;-webkit-box-sizing:border-box;box-sizing:border-box;padding-left:240px}.h-doc-container--with-simulator{padding-right:360px}", ""]);
+exports.push([module.i, ".h-doc-container{overflow:hidden;-webkit-box-sizing:border-box;box-sizing:border-box;padding-left:240px}.h-doc-container--with-simulator{padding-right:400px}@media (max-width:1300px){.h-doc-container--with-simulator{padding-right:360px}}", ""]);
 
 // exports
 
@@ -1368,7 +1394,7 @@ var content = __webpack_require__(16);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("5155cb6a", content, true, {});
+var update = __webpack_require__(2)("f4b2f306", content, true, {});
 
 /***/ }),
 /* 16 */
@@ -1395,7 +1421,7 @@ var content = __webpack_require__(18);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("985ec986", content, true, {});
+var update = __webpack_require__(2)("d2133d56", content, true, {});
 
 /***/ }),
 /* 18 */
@@ -1406,7 +1432,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".h-doc-demo-section{min-height:100vh;padding-bottom:20px;-webkit-box-sizing:border-box;box-sizing:border-box}.h-doc-demo-section__title{margin:0;padding:15px;font-size:16px;line-height:1.5;font-weight:400;text-transform:capitalize}.h-doc-demo-section__title+.h-doc-demo-block .h-doc-demo-block__title{padding-top:0}", ""]);
 
 // exports
 
