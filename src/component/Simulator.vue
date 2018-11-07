@@ -37,14 +37,44 @@ export default {
     }
   },
   mounted() {
-
+    window.addEventListener('scroll', () => {
+      this.scrollTop = window.scrollY;
+    });
+    window.addEventListener('resize', () => {
+      this.windowHeight = window.innerHeight;
+    });
+    const { iframe } = this.$refs;
+    if (iframe) {
+      if (iframe.contentDocument.readyState === 'complete') {
+        setTimeout(this.onSrcChanged, 0);
+      } else {
+        iframe.onload = () => {
+          this.onSrcChanged();
+        };
+      }
+    }
   },
   watch: {
-
+    src() {
+      this.onSrcChanged();
+    }
   },
   methods: {
     reloadIframe() {
-
+      const { iframe } = this.$refs;
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.location.reload();
+      }
+    },
+    onSrcChanged() {
+      const { iframe } = this.$refs;
+      if (iframe && iframe.contentWindow) {
+        if (this.src.indexOf('://') !== -1) {
+          this.iframeHostName = this.src.split('://')[1].split('/')[0];
+        } else {
+          this.iframeHostName = iframe.contentWindow.location.host || location.host;
+        }
+      }
     }
   }
 }

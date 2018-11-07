@@ -6,9 +6,10 @@
       <h-doc-content>
         <slot></slot>
       </h-doc-content>
-      <!-- <h-doc-footer-nav /> -->
+      <h-doc-footer-nav />
     </h-doc-container>
     <h-doc-simulator :src="simulator"></h-doc-simulator>
+    <h-footer></h-footer>
   </div>
 </template>
 

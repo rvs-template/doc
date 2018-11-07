@@ -8,6 +8,7 @@ import DemoSection from './component/DemoSection.vue';
 import Nav from './component/Nav.vue';
 import Header from './component/Header.vue';
 import Footer from './component/Footer.vue';
+import FooterNav from './component/FooterNav.vue';
 import Simulator from './component/Simulator.vue';
 import progress from 'nprogress';
 
@@ -17,8 +18,10 @@ const components = [
   Nav,
   Header,
   Footer,
+  FooterNav,
   HDoc,
   Content,
+  Block,
   DemoBlock,
   DemoSection,
   Container,
@@ -35,8 +38,10 @@ export {
   Nav,
   Header,
   Footer,
+  FooterNav,
   HDoc,
   Content,
+  Block,
   DemoBlock,
   DemoSection,
   Container,

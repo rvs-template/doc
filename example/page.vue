@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h-doc :config="config"></h-doc>
+    <h-doc :config="config" :simulator="simulator"></h-doc>
   </div>
 </template>
 
@@ -10,7 +10,8 @@ import config from '../config';
 export default {
   data() {
     return {
-      config: config
+      config: config,
+      simulator: 'http://localhost:8080/mobile.html'
     }
   },
   components: {
