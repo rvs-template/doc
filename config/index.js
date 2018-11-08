@@ -242,47 +242,6 @@ module.exports = {
               title: 'TreeSelect 分类选择'
             }
           ]
-        },
-        {
-          groupName: '业务组件',
-          list: [
-            {
-              path: '/address-edit',
-              title: 'AddressEdit 地址编辑'
-            },
-            {
-              path: '/address-list',
-              title: 'AddressList 地址列表'
-            },
-            {
-              path: '/area',
-              title: 'Area 省市区选择'
-            },
-            {
-              path: '/card',
-              title: 'Card 卡片'
-            },
-            {
-              path: '/contact-card',
-              title: 'Contact 联系人'
-            },
-            {
-              path: '/coupon-list',
-              title: 'Coupon 优惠券'
-            },
-            {
-              path: '/goods-action',
-              title: 'GoodsAction 商品页行动点'
-            },
-            {
-              path: '/submit-bar',
-              title: 'SubmitBar 提交订单栏'
-            },
-            {
-              path: '/sku',
-              title: 'Sku 商品规格弹层'
-            }
-          ]
         }
       ]
     }

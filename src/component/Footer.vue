@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'h-footer'
+  name: 'h-doc-footer'
 }
 </script>
 

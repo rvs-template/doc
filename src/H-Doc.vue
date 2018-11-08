@@ -5,11 +5,11 @@
     <h-doc-container :has-simulator="!!(simulator || simulators.length)">
       <h-doc-content>
         <slot></slot>
+        <h-doc-footer-nav :nav-config="config.nav" :base="base" />
       </h-doc-content>
-      <h-doc-footer-nav />
     </h-doc-container>
     <h-doc-simulator :src="simulator"></h-doc-simulator>
-    <h-footer></h-footer>
+    <h-doc-footer></h-doc-footer>
   </div>
 </template>
 
