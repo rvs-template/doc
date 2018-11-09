@@ -19,7 +19,7 @@ export default {
       scrollTop: window.scrollY,
       iframeHostName: '',
       windowHeight: window.innerHeight
-    }
+    };
   },
   computed: {
     srcWithTimestamp() {
@@ -77,7 +77,7 @@ export default {
       }
     }
   }
-}
+};
 </script>
 
 <style lang="less">

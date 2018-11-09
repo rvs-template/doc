@@ -48,7 +48,7 @@ export default {
     config: Object,
     active: String
   }
-}
+};
 </script>
 
 <style lang="less">

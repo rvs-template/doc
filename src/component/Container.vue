@@ -10,7 +10,7 @@ export default {
   props: {
     hasSimulator: Boolean
   }
-}
+};
 </script>
 
 <style lang="less">

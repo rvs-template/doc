@@ -7,7 +7,7 @@
 <script>
 export default {
   name: 'h-doc-block'
-}
+};
 </script>
 
 <style lang="less">

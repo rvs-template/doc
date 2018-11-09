@@ -16,7 +16,7 @@ export default {
       return this.$route.name;
     }
   }
-}
+};
 </script>
 
 <style lang="less">

@@ -12,12 +12,12 @@ export default {
     return {
       config: config,
       simulator: 'http://localhost:8080/mobile.html'
-    }
+    };
   },
   components: {
     Hdoc
   }
-}
+};
 </script>
 
 <style>

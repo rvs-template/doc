@@ -1,10 +1,10 @@
 <template>
   <div class="h-doc-footer-nav">
-    <div v-if="leftNav" @click="handleNavClick('prev')">
+    <div v-if="leftNav" @click="handleNavClick('prev')" class="h-doc-footer-nav__link h-doc-footer-nav__left ">
       <div class="h-doc-footer-nav__arrow-left" />
       <span>{{ leftNav.title }}</span>
     </div>
-    <div v-if="rightNav" @click="handleNavClick('next')">
+    <div v-if="rightNav" @click="handleNavClick('next')" class="h-doc-footer-nav__link h-doc-footer-nav__right">
       <span>{{ rightNav.title }}</span>
       <div class="h-doc-footer-nav__arrow-right" />
     </div>
@@ -21,15 +21,22 @@ export default {
   data() {
     return {
       nav: [],
+      currentPath: null,
       leftNav: null,
       rightNav: null
-    }
+    };
   },
   created() {
     this.setNav();
     this.updateNav();
     this.keyBoardHandler();
     console.log(this.nav, this.leftNav, this.rightNav);
+  },
+  watch: {
+    '$route.path'() {
+      this.setNav();
+      this.updateNav();
+    }
   },
   methods: {
     setNav() {
@@ -50,7 +57,7 @@ export default {
       this.currentPath = '/' + this.$route.path.split('/').pop();
       let len = this.nav.length;
       for (let i = 0; i < len; i++) {
-        if (this.nav.path === this.currentPath) {
+        if (this.nav[i].path === this.currentPath) {
           currentIndex = i;
           break;
         }
@@ -76,12 +83,67 @@ export default {
             this.handleNavClick('next');
             break;
         }
-      })
+      });
     }
   }
-}
+};
 </script>
 
 <style lang="less">
+@import "../style/var.less";
 
+.h-doc-footer-nav {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  padding: 24px 45px;
+  position: absolute;
+  &__link {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.5;
+    cursor: pointer;
+    opacity: .7;
+    color: @h-doc-code-color;
+    transition: .3s;
+    &:hover {
+      opacity: 1;
+      color: @h-doc-blue;
+    }
+    .h-icon {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    span {
+      vertical-align: middle;
+    }
+  }
+  &__left,
+  &__right {
+    padding: 0 15px;
+    position: relative;
+  }
+  &__right {
+    text-align: right;
+  }
+  &__arrow-left,
+  &__arrow-right {
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    position: absolute;
+    border: solid currentColor;
+    border-width: 0 1px 1px 0;
+  }
+  &__arrow-left {
+    left: 0;
+    transform: rotate(135deg);
+  }
+  &__arrow-right {
+    right: 0;
+    transform: rotate(-45deg);
+  }
+}
 </style>

@@ -1,10 +1,10 @@
 {
   "name": "hui-doc",
-  "version": "1.0.8",
+  "version": "1.1.4",
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "lint": "eslint --ext .js,.vue src test/unit",
+    "lint": "eslint --ext .js,.vue src example --fix",
     "dev": "webpack-dev-server --config ./build/webpack.dev.js",
     "build": "webpack --hide-modules --progress --config ./build/webpack.prod.js",
     "release": "npm run build && npm publish"

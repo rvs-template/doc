@@ -1,22 +1,29 @@
 <template>
-  <div class="h-doc-footer">
+  <div class="h-doc-footer" :style="style">
     <div class="h-doc-footer-bottom">Made with <span class="h-doc-footer-heart">❤</span> by Billow</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'h-doc-footer'
-}
+  name: 'h-doc-footer',
+  computed: {
+    style() {
+      return {
+        'bottom':  -window.innerHeight + 'px'
+      };
+    }
+  }
+};
 </script>
 
 <style lang="less">
   .h-doc-footer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
     &-bottom {
-      position: absolute;
-      bottom: 0;
       width: 100%;
-      text-align: center;
     }
     &-heart {
       font-size: 20px;

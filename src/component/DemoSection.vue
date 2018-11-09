@@ -14,12 +14,12 @@ export default {
   },
   computed: {
     demoName() {
-      return this.name || this.getParentName()
+      return this.name || this.getParentName();
     },
     style() {
       return {
         background: this.background
-      }
+      };
     }
   },
   methods: {
@@ -30,7 +30,7 @@ export default {
       }
     }
   }
-}
+};
 </script>
 
 <style lang="less">

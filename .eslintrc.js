@@ -17,8 +17,8 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    'semi': [error, always],
-    'space-before-function-paren': [error, never],
+    'semi': ["error", "always"],
+    'space-before-function-paren': ["error", "never"],
     'vue/require-v-for-key': 0,
     'vue/require-default-prop': 0,
     'vue/name-property-casing': 0,

@@ -31,7 +31,7 @@ const components = [
 export default function install() {
   components.forEach((component) => {
     Vue.component(component.name, component);
-  })
+  });
 }
 
 export {
