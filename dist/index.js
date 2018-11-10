@@ -529,8 +529,8 @@ var external__vue__default = /*#__PURE__*/__webpack_require__.n(external__vue_);
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-7c49c665","hasScoped":false,"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/H-Doc.vue
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"h-doc"},[_c('h-doc-header',{attrs:{"config":_vm.config.header}}),_vm._v(" "),_c('h-doc-nav',{attrs:{"nav-config":_vm.config.nav,"base":_vm.base}}),_vm._v(" "),_c('h-doc-container',{attrs:{"has-simulator":!!(_vm.simulator || _vm.simulators.length)}},[_c('h-doc-content',[_vm._t("default"),_vm._v(" "),_c('h-doc-footer-nav',{attrs:{"nav-config":_vm.config.nav,"base":_vm.base}})],2)],1),_vm._v(" "),_c('h-doc-simulator',{attrs:{"src":_vm.simulator}}),_vm._v(" "),_c('h-doc-footer')],1)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-27081c44","hasScoped":false,"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/H-Doc.vue
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"h-doc"},[_c('h-doc-header',{attrs:{"config":_vm.config.header}}),_vm._v(" "),_c('h-doc-nav',{attrs:{"nav-config":_vm.config.nav,"base":_vm.base}}),_vm._v(" "),_c('h-doc-container',{attrs:{"has-simulator":!!(_vm.simulator || _vm.simulators.length)}},[_c('h-doc-content',[_vm._t("default"),_vm._v(" "),_c('h-doc-footer-nav',{attrs:{"nav-config":_vm.config.nav,"base":_vm.base}})],2)],1),_vm._v(" "),_c('h-doc-simulator',{attrs:{"src":_vm.simulator}})],1)}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ var selectortype_template_index_0_src_H_Doc = (esExports);
@@ -1435,7 +1435,7 @@ var content = __webpack_require__(7);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("a134ef9a", content, true, {});
+var update = __webpack_require__(2)("43cc4117", content, true, {});
 
 /***/ }),
 /* 7 */

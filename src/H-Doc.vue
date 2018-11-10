@@ -9,7 +9,7 @@
       </h-doc-content>
     </h-doc-container>
     <h-doc-simulator :src="simulator"></h-doc-simulator>
-    <h-doc-footer></h-doc-footer>
+    <!-- <h-doc-footer></h-doc-footer> -->
   </div>
 </template>
 
