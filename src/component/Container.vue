@@ -1,5 +1,5 @@
 <template>
-  <div class="h-doc-container" :class="{ 'h-doc-container--with-simulator': hasSimulator }">
+  <div class="h-doc-container h-doc-row" :class="{ 'h-doc-container--with-simulator': hasSimulator }">
     <slot />
   </div>
 </template>
