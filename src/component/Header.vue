@@ -2,13 +2,12 @@
   <div class="h-doc-header">
     <div class="h-doc-row">
       <div class="h-doc-header__top">
-        <a class="h-doc-header__logo" :href="config.logo.href">
-          <span>{{ config.logo.title }}</span>
+        <a class="h-doc-header__logo" :href="config.logo && config.logo.href">
+          {{ config.logo && config.logo.title }}
+          <span>{{ config.logo && config.logo.version }}</span>
         </a>
+        <h-search-input v-if="searchConfig" :lang="lang" :search-config="searchConfig" />
         <ul class="h-doc-header__top-nav">
-          <li>
-            <input id="search-form" v-model="query" @input="querySearch">
-          </li>
           <li
             v-for="(value, key) in config.nav"
             class="h-doc-header__top-nav-item"
@@ -53,7 +52,8 @@ export default {
   name: "h-doc-header",
   props: {
     config: Object,
-    active: String
+    active: String,
+    searchConfig: Object
   },
   data() {
     return {
@@ -153,13 +153,16 @@ export default {
     }
   }
   &__logo {
+    width: 140px;
     display: block;
+    font-size: 22px;
+    color: @h-doc-black;
     span {
       display: inline-block;
       vertical-align: middle;
     }
     span {
-      font-size: 22px;
+      font-size: 12px;
       color: @h-doc-black;
       font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial,
         sans-serif;

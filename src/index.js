@@ -10,6 +10,7 @@ import Header from './component/Header.vue';
 import Footer from './component/Footer.vue';
 import FooterNav from './component/FooterNav.vue';
 import Simulator from './component/Simulator.vue';
+import SearchInput from './component/SearchInput.vue';
 import progress from 'nprogress';
 
 import './style/index.less';
@@ -25,7 +26,8 @@ const components = [
   DemoBlock,
   DemoSection,
   Container,
-  Simulator
+  Simulator,
+  SearchInput
 ];
 
 export default function install() {
@@ -46,5 +48,6 @@ export {
   DemoSection,
   Container,
   Simulator,
+  SearchInput,
   progress
 };
