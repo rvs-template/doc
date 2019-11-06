@@ -1,6 +1,10 @@
 <template>
   <div class="h-doc">
-    <h-doc-header :config="config.header"></h-doc-header>
+    <h-doc-header
+      :config="config.header"
+      :search-config="searchConfig"
+    >
+    </h-doc-header>
     <h-doc-nav :nav-config="config.nav" :base="base"></h-doc-nav>
     <h-doc-container :has-simulator="!!(simulator || simulators.length)">
       <h-doc-content>
@@ -21,6 +25,7 @@ export default {
       type: Object,
       required: true
     },
+    searchConfig: Object,
     simulator: String,
     simulators: {
       type: Array,

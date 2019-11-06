@@ -2,6 +2,7 @@ module.exports = {
   header: {
     logo: {
       title: 'Hui',
+      version: 'v1.0',
       href: '#/'
     },
     nav: {
