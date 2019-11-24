@@ -30,7 +30,6 @@ export default {
     this.setNav();
     this.updateNav();
     this.keyBoardHandler();
-    console.log(this.nav, this.leftNav, this.rightNav);
   },
   watch: {
     '$route.path'() {

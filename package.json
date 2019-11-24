@@ -1,7 +1,6 @@
 {
-  "name": "@billow/hui-doc",
-  "version": "1.0.0",
-  "scope": "@billow",
+  "name": "hui-doc",
+  "version": "1.1.8",
   "description": "hui site",
   "main": "./dist/index.js",
   "scripts": {

@@ -25,6 +25,13 @@ module.exports = merge(baseWebpackConfig, {
         NODE_ENV: JSON.stringify('production')
       }
     }),
-    new webpack.optimize.ModuleConcatenationPlugin()
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      comments: false,
+      compress: {
+        warnings: false,
+        drop_console: true
+      }
+    })
   ]
 });
